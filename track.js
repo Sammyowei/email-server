@@ -1,13 +1,13 @@
-const admin = require("firebase-admin");
+import admin from "firebase-admin";
+import fs from "fs";
 
+const serviceAccount = JSON.parse(fs.readFileSync("./firebase-service-account.json", "utf8"));
 
-// Initialize Firebase Admin if not already initialized
 if (!admin.apps.length) {
     admin.initializeApp({
-        credential: admin.credential.cert(require("./firebase-service-account.json")), // Replace with your service account JSON file path
+        credential: admin.credential.cert(serviceAccount),
     });
 }
-
 /**
  * Sends a Firebase push notification using Firebase Admin SDK.
  *
@@ -17,14 +17,14 @@ if (!admin.apps.length) {
  * @param {Object} data - Custom data payload (optional).
  * @returns {Promise<Object>} - The response from Firebase.
  */
-async function sendFirebasePushNotification(deviceToken, title, body) {
+async function sendFirebasePushNotification(deviceToken, title, body, data = {}) {
     const message = {
         token: deviceToken,
         notification: {
             title,
             body,
         },
-
+        data, // Attach custom data payload if provided
     };
 
     try {
@@ -36,4 +36,5 @@ async function sendFirebasePushNotification(deviceToken, title, body) {
         throw error;
     }
 }
+
 export default sendFirebasePushNotification;
