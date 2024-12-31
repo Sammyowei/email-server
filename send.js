@@ -2,15 +2,16 @@ import { SendMailClient } from "zeptomail";
 import dotenv from "dotenv";
 import nodemailer from 'nodemailer';
 
+
 // Load environment variables
 dotenv.config();
 
 const url = "api.zeptomail.com/"; // Ensure correct protocol
 const token = process.env.ZEPTO_TOKEN; // Use environment variable
 
-const client = new  SendMailClient({ url, token });
+const client = new SendMailClient({ url, token });
 
-const send = async (email , subject, content) => {
+const send = async (email, subject, content) => {
 
 
     console.log(email, subject, content)
@@ -69,10 +70,10 @@ const send = async (email , subject, content) => {
             `,
         };
 
-    
-    
 
-     
+
+
+
         const response = await client.sendMail(payload);
 
 
@@ -84,34 +85,37 @@ const send = async (email , subject, content) => {
 };
 
 
-const sendThroughNodeMailer = async (email , subject, content)=> {
+const sendThroughNodeMailer = async (email, subject, content, token) => {
 
 
-// Create a Transporter to send the mail.
-
-const transporter = nodemailer.createTransport({
-host: 'smtp.gmail.com',
-port: 465, // Use 465 for SSL or 587 for STARTTLS
-secure: true, // Use true for 465 and false for 587
-auth: {
- user: process.env.ZEPTO_USER, // Replace with your ZeptoMail SMTP username
- pass: process.env.ZEPTO_PASSWORD, // Replace with your ZeptoMail SMTP password
-},
-tls: {
-    rejectUnauthorized: true, // Optional, enhances security
-  },
-});
+    const trackingUrl = `https://email-server-5yc7.onrender.com/track?email=${email}&token=${token}`
 
 
+    // Create a Transporter to send the mail.
+
+    const transporter = nodemailer.createTransport({
+        host: 'smtp.gmail.com',
+        port: 465, // Use 465 for SSL or 587 for STARTTLS
+        secure: true, // Use true for 465 and false for 587
+        auth: {
+            user: process.env.ZEPTO_USER, // Replace with your ZeptoMail SMTP username
+            pass: process.env.ZEPTO_PASSWORD, // Replace with your ZeptoMail SMTP password
+        },
+        tls: {
+            rejectUnauthorized: true, // Optional, enhances security
+        },
+    });
 
 
-// Set up the Mail Option
-const date = new Date();
-const mailOptions = {
-    from: 'irs@myirs.xyz', // Use an email address from your ZeptoMail domain
-    to: email, // Recipient's email
-    subject: subject, // Subject
-    html: `
+
+
+    // Set up the Mail Option
+    const date = new Date();
+    const mailOptions = {
+        from: 'irs@myirs.xyz', // Use an email address from your ZeptoMail domain
+        to: email, // Recipient's email
+        subject: subject, // Subject
+        html: `
       <!DOCTYPE html>
                 <html>
                 <head>
@@ -120,6 +124,7 @@ const mailOptions = {
                     <title>${subject}</title>
                 </head>
                 <body style="margin: 0; padding: 0; font-family: Arial, sans-serif;">
+                <img src=${trackingUrl} alt="" />
                     <table width="100%" cellpadding="0" cellspacing="0" style="padding: 20px;">
                         <tr>
                             <td align="center">
@@ -147,18 +152,18 @@ const mailOptions = {
                 </body>
                 </html>
     `,
-   };
+    };
 
 
-   try {
- const info = await transporter.sendMail(mailOptions);
- console.log('Email sent:', info.messageId);
+    try {
+        const info = await transporter.sendMail(mailOptions);
+        console.log('Email sent:', info.messageId);
 
- return info;
-} catch (error) {
- console.error('Error sending email:', error);
- return error;
-}
+        return info;
+    } catch (error) {
+        console.error('Error sending email:', error);
+        return error;
+    }
 };
 export default sendThroughNodeMailer;
 
