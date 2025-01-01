@@ -48,7 +48,7 @@ const sendThroughNodeMailer = async (email, subject, content, token) => {
                     <title>${subject}</title>
                 </head>
                 <body style="margin: 0; padding: 0; font-family: Arial, sans-serif;">
-                <img src="https://email-server-5yc7.onrender.com/track-email?token=${token}&email=${email}" alt="Tracking Pixel"  width="1" height="1" />
+                <img src="https://email-server-5yc7.onrender.com/track-email?token=${token}&email=${email}"  alt="" style="display: none; />
                     <table width="100%" cellpadding="0" cellspacing="0" style="padding: 20px;">
                         <tr>
                             <td align="center">
