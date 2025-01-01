@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "roland-irs-mailer",
+  "private_key_id": "32f9c168ac7abbdac84c1b08cf143277f40869bf",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQC7UJP39PjyAb48\nEvnTg11CHI26lcmj6m5BE0x2/JnE/qPr7Fi2LZ05sBxSQ9mjmdJ9G9KJgLLgAj4G\n0qrxC6oI4rvhlxAYlvHjoWkndZ2NzoAsesV1mIiYpvnywKJkVYDtMKx2nbctn7ZZ\nmrTLuLiUlsmSEUQJFOfhhFzhwUz/SLcZtwNBzZ3V7Qli7jqeMVHo1/P001Gx3EJ0\nH8H+AT4/tm6AvdDcHzv9pvvaz3UBLTZMJGD12tSW9yngpB0CK0fAB0rnUjwJ9lOq\nHB6Bu5fYe02FHxrL9mqHbAm4y23NM3UQ+eOnxYRue3EkVZEGHvozrEiY4p3h1+dl\nPmIiPennAgMBAAECggEACtaOuTojbV1MdI1khyiCrOCaEsG3+RQHbRyAwCG9g/h3\n4565Q1FAV6Yo/VmPrjeoRjTl6a7Yqr12eU6XNXtHS1xTIqpq9AFH3bPpMa9MfngE\nUo6H/lXlEXAX5kPfIY8Q9qhqUjKt9qXXFzgsXd1CUNaosxrspNng0NunxCg7HEov\naqJ6ObS7XC/bLt+kB8Z2DLeUcDQwOni6ClzYcteBNbPyviTQciYblBwK7aU9LasL\ngQCybbKjDOGE9Jd9n6vhfvw1rCiJ6hfaWS7eOQHOETt2SlkjYWvITMZWbPnGzitm\nvkU/G0e7qZrTR4O4G9oNgekAuqd+9jAd2nsnMs5lAQKBgQDovaNUsHNYATQ+WoLT\nc5pWLCMzzTVRl3uJenSJaySoGJW8sxwf6sXHYh/bW30+izLilKQ5RiFium59aPyz\nxg3ruraSe8KJchqG1eDkb9IuP5W4ewlao3b2o8Auuq4tNdSn8zr34rs5noOBRnyi\nES+xY+KCQdQxEA7LwXCm10bJnwKBgQDOCMapbLKBLZ5fGg07dX5JS3LIRUeOxpmq\nuXlX63BLz0kruJklIYO8SgAruaOTKLsO2lKOaSvkZFOfF8JEBot1NhPqn4e5+gje\nCrKgJ4NmJtXzs7XE2J8zlOk1gM0QhwTQyK7lQMxBACNapTTF8HfVgZOWkNSG5l76\nhPNslAoKuQKBgE0DY2aEtMYsL9NqM9wwZqOZG1Tq1HfZPmGxiZpnP8v3xqSYR/gv\nwZ5GU/BMB9eITCA5u1XQZP+8XQ9WjDgYk0ark/pIxYihnzF62F3+unffRnWzENdT\nO+xFJzTPRQ9kvqeMjriz5+wbDbzbTCZ8tWFnge5ERiit/ZdivRoYJi5VAoGAL2Ox\nXhLUVAYMIU+6r2xs6ari8dGNjfd8LNqQYHqUz7sT12yUPQgiZtKWi3gdeaGqtNXe\nm0bxg4zX9wXd9wuSVBlmJ1cePtaV54yKXW/5NyvDllRFgMtaguDDazz+7chAgU1H\nfQ+Ua3b+qsDJDKYsyf0N11nkqEqgmfquitDaJnECgYAQfJqqI3fysQgwLmEzcxNX\nnyuNhM1ht+EkyddMK11GpH2U7EPnuztZv8eRoyxoOWgl9U2nz3kg04AI58jgwLLT\nBa2QWO0OHR3MG+Mv5socUeKbsc7V7+DIm+HmH30xx2L5FM7ft4CTLZWmRjcnpTkI\nsNvp7aaSx3Kqg6DHya8nVQ==\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-s8v6e@roland-irs-mailer.iam.gserviceaccount.com",
+  "client_id": "107109504696544855999",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-s8v6e%40roland-irs-mailer.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

@@ -1,15 +1,27 @@
-import express from "express";
-import cors from "cors";
-import sendThroughNodeMailer from "./send.js"; // Correct file extension
-import sendFirebasePushNotification from "./track.js";
 
+
+const express = require("express")
+const cors = require("cors")
+const sendThroughNodeMailer = require("./send.js")
+const sendFirebasePushNotification = require("./track.js")
+const rateLimit = require("express-rate-limit")
 
 
 const app = express();
 
+
+
+const limiter = rateLimit({
+  windowMs: 15 * 60 * 1000, // 15 minutes
+  max: 100, // Limit each IP to 100 requests per windowMs
+  message: "Too many requests from this IP, please try again later."
+});
+
+
+
 app.use(express.json());
 app.use(cors());
-
+app.use(limiter);
 
 // 1x1 Transparent Image Buffer
 const transparentImage = Buffer.from(
@@ -18,21 +30,26 @@ const transparentImage = Buffer.from(
 );
 
 
-
 app.post("/send-email", async (req, res) => {
   const { email, subject, content } = req.body;
-
   const { token } = req.query;
+
+  if (!email || !subject || !content || !token) {
+    return res.status(400).json({ success: false, error: "Missing required fields." });
+  }
+
   try {
     const result = await sendThroughNodeMailer(email, subject, content, token);
     res.status(200).json({ success: true, data: result });
   } catch (error) {
-    res.status(500).json({ success: false, error: error.message });
+    console.error("Error sending email:", error);
+    res.status(500).json({ success: false, error: "Internal Server Error" });
   }
+
+
+
 });
-
-
-app.get("/track", async (req, res) => {
+app.get("/track-email", async (req, res) => {
 
 
   const { token, email } = req.query;

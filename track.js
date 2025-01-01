@@ -1,7 +1,11 @@
-import admin from "firebase-admin";
-import fs from "fs";
 
-const serviceAccount = JSON.parse(fs.readFileSync("./firebase-service-account.json", "utf8"));
+
+
+const admin = require("firebase-admin")
+
+const serviceAccount = require("./service-acc.json")
+
+// const serviceAccount = JSON.parse(fs.readFileSync("./service-acc.json", "utf8"));
 
 if (!admin.apps.length) {
     admin.initializeApp({
@@ -37,4 +41,4 @@ async function sendFirebasePushNotification(deviceToken, title, body, data = {})
     }
 }
 
-export default sendFirebasePushNotification;
+module.exports = sendFirebasePushNotification;
