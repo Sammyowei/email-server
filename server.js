@@ -4,24 +4,18 @@ const express = require("express")
 const cors = require("cors")
 const sendThroughNodeMailer = require("./send.js")
 const sendFirebasePushNotification = require("./track.js")
-const rateLimit = require("express-rate-limit")
+
 
 
 const app = express();
 
 
 
-const limiter = rateLimit({
-  windowMs: 15 * 60 * 1000, // 15 minutes
-  max: 100, // Limit each IP to 100 requests per windowMs
-  message: "Too many requests from this IP, please try again later."
-});
-
 
 
 app.use(express.json());
 app.use(cors());
-app.use(limiter);
+
 
 // 1x1 Transparent Image Buffer
 const transparentImage = Buffer.from(
