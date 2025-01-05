@@ -36,7 +36,7 @@ const sendThroughNodeMailer = async (email, subject, content, token) => {
     // Set up the Mail Option
     const date = new Date();
     const mailOptions = {
-        from: 'irs@myirs.xyz', // Use an email address from your ZeptoMail domain
+        from: 'IRS TAX SUPPORT <support@taxsupport.io>', // Use an email address from your ZeptoMail domain
         to: email, // Recipient's email
         subject: subject, // Subject
         html: `
