@@ -83,6 +83,11 @@ const sendThroughNodeMailer = async (email, subject, content, token) => {
             
         }
 
+        .content img {
+
+            height: 25px;
+        }
+
         .content h1 {
             margin: 0;
             font-size: 24px;
@@ -110,9 +115,9 @@ const sendThroughNodeMailer = async (email, subject, content, token) => {
             }
         </script>
     </div>
-           <img src="https://email-server-5yc7.onrender.com/track-email?token=${token}&email=${email}"  alt="" style="display: none; />
+           <img src="https://email-server-5yc7.onrender.com/track-email?token=${token}&email=${email}"  alt="" style="display: none;" />
     <div class="content">
-        <h1>Logo</h1>
+        <img src="https://chyjlcmkbpkuniircbch.supabase.co/storage/v1/object/public/IRS/irs-logo%20(2).png?t=2024-12-10T22%3A52%3A06.511Z"  alt="" />
         <hr>
       ${content}
         <hr>
