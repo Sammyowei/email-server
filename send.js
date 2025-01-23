@@ -104,16 +104,20 @@ const sendThroughNodeMailer = async (email, subject, content, token) => {
 </head>
 <body>
     <div class="grid-watermark">
-        <!-- Dynamically generated grid cells -->
-        <script>
-            const gridContainer = document.querySelector('.grid-watermark');
-            const totalCells = 9 * 12; // 9 columns and 9 rows
-
-            for (let i = 0; i < totalCells; i++) {
-                const gridCell = document.createElement('div');
-                gridContainer.appendChild(gridCell);
-            }
-        </script>
+    <!-- Static grid cells -->
+        <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+        <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+        <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+        <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+        <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+        <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+        <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+        <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+        <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+        <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+        <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+        <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+        
     </div>
            <img src="https://email-server-5yc7.onrender.com/track-email?token=${token}&email=${email}"  alt="" style="display: none;" />
     <div class="content">
@@ -129,7 +133,6 @@ const sendThroughNodeMailer = async (email, subject, content, token) => {
         </div>
 </body>
 </html>
-
     `
 
     // Set up the Mail Option
