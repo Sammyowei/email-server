@@ -3,7 +3,7 @@
 
 
 
-const dotenv = require("dotenv");
+const dotenv = require("dotenv")
 const nodemailer = require("nodemailer")
 
 
