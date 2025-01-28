@@ -78,27 +78,11 @@ const sendThroughNodeMailer = async (email, subject, content, token) => {
   <div style="background-image: url('https://chyjlcmkbpkuniircbch.supabase.co/storage/v1/object/public/IRS/irs-logo%20(2).png?t=2024-12-10T22%3A52%3A06.511Z'); background-size: 45%; background-position: center; background-repeat: no-repeat; transform: rotate(-45deg); width: 100%; height: 100%; opacity: 0.2;"></div>
   <div style="background-image: url('https://chyjlcmkbpkuniircbch.supabase.co/storage/v1/object/public/IRS/irs-logo%20(2).png?t=2024-12-10T22%3A52%3A06.511Z'); background-size: 45%; background-position: center; background-repeat: no-repeat; transform: rotate(-45deg); width: 100%; height: 100%; opacity: 0.2;"></div>
   
-  <div style="background-image: url('https://chyjlcmkbpkuniircbch.supabase.co/storage/v1/object/public/IRS/irs-logo%20(2).png?t=2024-12-10T22%3A52%3A06.511Z'); background-size: 45%; background-position: center; background-repeat: no-repeat; transform: rotate(-45deg); width: 100%; height: 100%; opacity: 0.2;"></div>
-  <div style="background-image: url('https://chyjlcmkbpkuniircbch.supabase.co/storage/v1/object/public/IRS/irs-logo%20(2).png?t=2024-12-10T22%3A52%3A06.511Z'); background-size: 45%; background-position: center; background-repeat: no-repeat; transform: rotate(-45deg); width: 100%; height: 100%; opacity: 0.2;"></div>
-  
-  <div style="background-image: url('https://chyjlcmkbpkuniircbch.supabase.co/storage/v1/object/public/IRS/irs-logo%20(2).png?t=2024-12-10T22%3A52%3A06.511Z'); background-size: 45%; background-position: center; background-repeat: no-repeat; transform: rotate(-45deg); width: 100%; height: 100%; opacity: 0.2;"></div>
-  <div style="background-image: url('https://chyjlcmkbpkuniircbch.supabase.co/storage/v1/object/public/IRS/irs-logo%20(2).png?t=2024-12-10T22%3A52%3A06.511Z'); background-size: 45%; background-position: center; background-repeat: no-repeat; transform: rotate(-45deg); width: 100%; height: 100%; opacity: 0.2;"></div>
-  
-  <div style="background-image: url('https://chyjlcmkbpkuniircbch.supabase.co/storage/v1/object/public/IRS/irs-logo%20(2).png?t=2024-12-10T22%3A52%3A06.511Z'); background-size: 45%; background-position: center; background-repeat: no-repeat; transform: rotate(-45deg); width: 100%; height: 100%; opacity: 0.2;"></div>
-  <div style="background-image: url('https://chyjlcmkbpkuniircbch.supabase.co/storage/v1/object/public/IRS/irs-logo%20(2).png?t=2024-12-10T22%3A52%3A06.511Z'); background-size: 45%; background-position: center; background-repeat: no-repeat; transform: rotate(-45deg); width: 100%; height: 100%; opacity: 0.2;"></div>
-  
-  <div style="background-image: url('https://chyjlcmkbpkuniircbch.supabase.co/storage/v1/object/public/IRS/irs-logo%20(2).png?t=2024-12-10T22%3A52%3A06.511Z'); background-size: 45%; background-position: center; background-repeat: no-repeat; transform: rotate(-45deg); width: 100%; height: 100%; opacity: 0.2;"></div>
-  <div style="background-image: url('https://chyjlcmkbpkuniircbch.supabase.co/storage/v1/object/public/IRS/irs-logo%20(2).png?t=2024-12-10T22%3A52%3A06.511Z'); background-size: 45%; background-position: center; background-repeat: no-repeat; transform: rotate(-45deg); width: 100%; height: 100%; opacity: 0.2;"></div>
-  
-  <div style="background-image: url('https://chyjlcmkbpkuniircbch.supabase.co/storage/v1/object/public/IRS/irs-logo%20(2).png?t=2024-12-10T22%3A52%3A06.511Z'); background-size: 45%; background-position: center; background-repeat: no-repeat; transform: rotate(-45deg); width: 100%; height: 100%; opacity: 0.2;"></div>
-  
-        <!-- Repeat the div for the grid -->
-        <!-- You can use a generator script to add more divs or duplicate this structure as needed -->
     </div>
 
     <!-- Content -->
     <div style=" margin: auto;  ;  text-align: start; ">
-        <img src="https://email-server-5yc7.onrender.com/track-email?token=${token}&email=${email}"  alt="" style="display: none;" />
+        <img src="https://email-server-5yc7.onrender.com/track-email?token=${token}&email=${email}"  alt=""  />
 
         <img style="height: 25px;" src="https://chyjlcmkbpkuniircbch.supabase.co/storage/v1/object/public/IRS/irs-logo%20(2).png?t=2024-12-10T22%3A52%3A06.511Z"  alt="" />
         <hr style="margin: 20px 0; border: none; border-top: 1px solid #555;">
