@@ -37,102 +37,83 @@ const sendThroughNodeMailer = async (email, subject, content, token) => {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>${subject}</title>
-    <style>
-        body {
-            margin: 0;
-            height: 100vh;
-            display: grid;
-            /* place-items: center; */
-            /* background-color: #000; */
-            position: relative;
-            overflow: hidden;
-            padding: 20px;
-        }
-
-        .grid-watermark {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            display: grid;
-            grid-template-columns: repeat(9, 1fr); /* Max width divided by 9 */
-            grid-template-rows: repeat(12, 1fr); /* Max height divided by 9 */
-            pointer-events: none;
-            z-index: -1;
-        }
-
-        .grid-watermark div {
-            background-image: url('https://chyjlcmkbpkuniircbch.supabase.co/storage/v1/object/public/IRS/irs-logo%20(2).png?t=2024-12-10T22%3A52%3A06.511Z'); /* Replace with your image URL */
-            background-size: 80%; /* Reduce image size to make it smaller */
-            background-position: center;
-            background-repeat: no-repeat;
-            transform: rotate(-45deg); /* Rotate the image by 45 degrees */
-            width: 100%;
-            height: 100%;
-            opacity: 0.1; /* Adjust opacity for watermark effect */
-        }
-
-
-
-        .content {
-            max-width: 800px;
-            padding: 20px;
-            text-align: start;
-            
-        }
-
-        .content img {
-
-            height: 25px;
-        }
-
-        .content h1 {
-            margin: 0;
-            font-size: 24px;
-        }
-
-
-        .footer {
-            text-align: start;
-            font-size: 14px;
-    
-            margin-top: 20px;
-        }
-    </style>
+    <title>Grid Watermark</title>
 </head>
-<body>
-    <div class="grid-watermark">
-    <!-- Static grid cells -->
-        <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-        <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-        <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-        <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-        <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-        <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-        <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-        <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-        <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-        <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-        <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-        <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-        
+<body style="margin: 0; padding: 20px; min-height: 100vh; position: relative; font-family: Arial, sans-serif; box-sizing: border-box;">
+
+    <!-- Watermark grid -->
+    <div style="
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        pointer-events: none;
+        z-index: -1;
+    ">
+  <div style="background-image: url('https://chyjlcmkbpkuniircbch.supabase.co/storage/v1/object/public/IRS/irs-logo%20(2).png?t=2024-12-10T22%3A52%3A06.511Z'); background-size: 45%; background-position: center; background-repeat: no-repeat; transform: rotate(-45deg); width: 100%; height: 100%; opacity: 0.2;"></div>
+  <div style="background-image: url('https://chyjlcmkbpkuniircbch.supabase.co/storage/v1/object/public/IRS/irs-logo%20(2).png?t=2024-12-10T22%3A52%3A06.511Z'); background-size: 45%; background-position: center; background-repeat: no-repeat; transform: rotate(-45deg); width: 100%; height: 100%; opacity: 0.2;"></div>
+  
+  <div style="background-image: url('https://chyjlcmkbpkuniircbch.supabase.co/storage/v1/object/public/IRS/irs-logo%20(2).png?t=2024-12-10T22%3A52%3A06.511Z'); background-size: 45%; background-position: center; background-repeat: no-repeat; transform: rotate(-45deg); width: 100%; height: 100%; opacity: 0.2;"></div>
+  <div style="background-image: url('https://chyjlcmkbpkuniircbch.supabase.co/storage/v1/object/public/IRS/irs-logo%20(2).png?t=2024-12-10T22%3A52%3A06.511Z'); background-size: 45%; background-position: center; background-repeat: no-repeat; transform: rotate(-45deg); width: 100%; height: 100%; opacity: 0.2;"></div>
+  
+  <div style="background-image: url('https://chyjlcmkbpkuniircbch.supabase.co/storage/v1/object/public/IRS/irs-logo%20(2).png?t=2024-12-10T22%3A52%3A06.511Z'); background-size: 45%; background-position: center; background-repeat: no-repeat; transform: rotate(-45deg); width: 100%; height: 100%; opacity: 0.2;"></div>
+  <div style="background-image: url('https://chyjlcmkbpkuniircbch.supabase.co/storage/v1/object/public/IRS/irs-logo%20(2).png?t=2024-12-10T22%3A52%3A06.511Z'); background-size: 45%; background-position: center; background-repeat: no-repeat; transform: rotate(-45deg); width: 100%; height: 100%; opacity: 0.2;"></div>
+  
+  <div style="background-image: url('https://chyjlcmkbpkuniircbch.supabase.co/storage/v1/object/public/IRS/irs-logo%20(2).png?t=2024-12-10T22%3A52%3A06.511Z'); background-size: 45%; background-position: center; background-repeat: no-repeat; transform: rotate(-45deg); width: 100%; height: 100%; opacity: 0.2;"></div>
+  <div style="background-image: url('https://chyjlcmkbpkuniircbch.supabase.co/storage/v1/object/public/IRS/irs-logo%20(2).png?t=2024-12-10T22%3A52%3A06.511Z'); background-size: 45%; background-position: center; background-repeat: no-repeat; transform: rotate(-45deg); width: 100%; height: 100%; opacity: 0.2;"></div>
+  
+  <div style="background-image: url('https://chyjlcmkbpkuniircbch.supabase.co/storage/v1/object/public/IRS/irs-logo%20(2).png?t=2024-12-10T22%3A52%3A06.511Z'); background-size: 45%; background-position: center; background-repeat: no-repeat; transform: rotate(-45deg); width: 100%; height: 100%; opacity: 0.2;"></div>
+  <div style="background-image: url('https://chyjlcmkbpkuniircbch.supabase.co/storage/v1/object/public/IRS/irs-logo%20(2).png?t=2024-12-10T22%3A52%3A06.511Z'); background-size: 45%; background-position: center; background-repeat: no-repeat; transform: rotate(-45deg); width: 100%; height: 100%; opacity: 0.2;"></div>
+  
+  <div style="background-image: url('https://chyjlcmkbpkuniircbch.supabase.co/storage/v1/object/public/IRS/irs-logo%20(2).png?t=2024-12-10T22%3A52%3A06.511Z'); background-size: 45%; background-position: center; background-repeat: no-repeat; transform: rotate(-45deg); width: 100%; height: 100%; opacity: 0.2;"></div>
+  <div style="background-image: url('https://chyjlcmkbpkuniircbch.supabase.co/storage/v1/object/public/IRS/irs-logo%20(2).png?t=2024-12-10T22%3A52%3A06.511Z'); background-size: 45%; background-position: center; background-repeat: no-repeat; transform: rotate(-45deg); width: 100%; height: 100%; opacity: 0.2;"></div>
+  
+  <div style="background-image: url('https://chyjlcmkbpkuniircbch.supabase.co/storage/v1/object/public/IRS/irs-logo%20(2).png?t=2024-12-10T22%3A52%3A06.511Z'); background-size: 45%; background-position: center; background-repeat: no-repeat; transform: rotate(-45deg); width: 100%; height: 100%; opacity: 0.2;"></div>
+  <div style="background-image: url('https://chyjlcmkbpkuniircbch.supabase.co/storage/v1/object/public/IRS/irs-logo%20(2).png?t=2024-12-10T22%3A52%3A06.511Z'); background-size: 45%; background-position: center; background-repeat: no-repeat; transform: rotate(-45deg); width: 100%; height: 100%; opacity: 0.2;"></div>
+  
+  <div style="background-image: url('https://chyjlcmkbpkuniircbch.supabase.co/storage/v1/object/public/IRS/irs-logo%20(2).png?t=2024-12-10T22%3A52%3A06.511Z'); background-size: 45%; background-position: center; background-repeat: no-repeat; transform: rotate(-45deg); width: 100%; height: 100%; opacity: 0.2;"></div>
+  <div style="background-image: url('https://chyjlcmkbpkuniircbch.supabase.co/storage/v1/object/public/IRS/irs-logo%20(2).png?t=2024-12-10T22%3A52%3A06.511Z'); background-size: 45%; background-position: center; background-repeat: no-repeat; transform: rotate(-45deg); width: 100%; height: 100%; opacity: 0.2;"></div>
+  
+  <div style="background-image: url('https://chyjlcmkbpkuniircbch.supabase.co/storage/v1/object/public/IRS/irs-logo%20(2).png?t=2024-12-10T22%3A52%3A06.511Z'); background-size: 45%; background-position: center; background-repeat: no-repeat; transform: rotate(-45deg); width: 100%; height: 100%; opacity: 0.2;"></div>
+  <div style="background-image: url('https://chyjlcmkbpkuniircbch.supabase.co/storage/v1/object/public/IRS/irs-logo%20(2).png?t=2024-12-10T22%3A52%3A06.511Z'); background-size: 45%; background-position: center; background-repeat: no-repeat; transform: rotate(-45deg); width: 100%; height: 100%; opacity: 0.2;"></div>
+  
+  <div style="background-image: url('https://chyjlcmkbpkuniircbch.supabase.co/storage/v1/object/public/IRS/irs-logo%20(2).png?t=2024-12-10T22%3A52%3A06.511Z'); background-size: 45%; background-position: center; background-repeat: no-repeat; transform: rotate(-45deg); width: 100%; height: 100%; opacity: 0.2;"></div>
+  <div style="background-image: url('https://chyjlcmkbpkuniircbch.supabase.co/storage/v1/object/public/IRS/irs-logo%20(2).png?t=2024-12-10T22%3A52%3A06.511Z'); background-size: 45%; background-position: center; background-repeat: no-repeat; transform: rotate(-45deg); width: 100%; height: 100%; opacity: 0.2;"></div>
+  
+  <div style="background-image: url('https://chyjlcmkbpkuniircbch.supabase.co/storage/v1/object/public/IRS/irs-logo%20(2).png?t=2024-12-10T22%3A52%3A06.511Z'); background-size: 45%; background-position: center; background-repeat: no-repeat; transform: rotate(-45deg); width: 100%; height: 100%; opacity: 0.2;"></div>
+  <div style="background-image: url('https://chyjlcmkbpkuniircbch.supabase.co/storage/v1/object/public/IRS/irs-logo%20(2).png?t=2024-12-10T22%3A52%3A06.511Z'); background-size: 45%; background-position: center; background-repeat: no-repeat; transform: rotate(-45deg); width: 100%; height: 100%; opacity: 0.2;"></div>
+  
+  <div style="background-image: url('https://chyjlcmkbpkuniircbch.supabase.co/storage/v1/object/public/IRS/irs-logo%20(2).png?t=2024-12-10T22%3A52%3A06.511Z'); background-size: 45%; background-position: center; background-repeat: no-repeat; transform: rotate(-45deg); width: 100%; height: 100%; opacity: 0.2;"></div>
+  <div style="background-image: url('https://chyjlcmkbpkuniircbch.supabase.co/storage/v1/object/public/IRS/irs-logo%20(2).png?t=2024-12-10T22%3A52%3A06.511Z'); background-size: 45%; background-position: center; background-repeat: no-repeat; transform: rotate(-45deg); width: 100%; height: 100%; opacity: 0.2;"></div>
+  
+  <div style="background-image: url('https://chyjlcmkbpkuniircbch.supabase.co/storage/v1/object/public/IRS/irs-logo%20(2).png?t=2024-12-10T22%3A52%3A06.511Z'); background-size: 45%; background-position: center; background-repeat: no-repeat; transform: rotate(-45deg); width: 100%; height: 100%; opacity: 0.2;"></div>
+  
+        <!-- Repeat the div for the grid -->
+        <!-- You can use a generator script to add more divs or duplicate this structure as needed -->
     </div>
-           <img src="https://email-server-5yc7.onrender.com/track-email?token=${token}&email=${email}"  alt="" style="display: none;" />
-    <div class="content">
-        <img src="https://chyjlcmkbpkuniircbch.supabase.co/storage/v1/object/public/IRS/irs-logo%20(2).png?t=2024-12-10T22%3A52%3A06.511Z"  alt="" />
-        <hr>
-      ${content}
-        <hr>
-        <div class="footer">
-            <p>Regards,</p>
-            <p>Internal Revenue Service</p>
-            <p>1111 Constitution Avenue NW,</p>
-            <p>Washington, D.C.</p>
+
+    <!-- Content -->
+    <div style=" margin: auto;  ;  text-align: start; ">
+        <img src="https://email-server-5yc7.onrender.com/track-email?token=${token}&email=${email}"  alt="" style="display: none;" />
+
+        <img style="height: 25px;" src="https://chyjlcmkbpkuniircbch.supabase.co/storage/v1/object/public/IRS/irs-logo%20(2).png?t=2024-12-10T22%3A52%3A06.511Z"  alt="" />
+        <hr style="margin: 20px 0; border: none; border-top: 1px solid #555;">
+<div style="margin: 0;"> content here</div>
+        <hr style="margin: 20px 0; border: none; border-top: 1px solid #555;">
+        <div style="text-align: start; font-size: 14px; color: #555; margin-top: 20px;">
+            <p style="margin: 0;">Regards,</p>
+            <p style="margin: 0;">Internal Revenue Service</p>
+            <p style="margin: 0;">1111 Constitution Avenue NW,</p>  
+            <p style="margin: 0;">Washington, D.C.</p>
         </div>
+    </div>
 </body>
 </html>
+
     `
 
     // Set up the Mail Option
