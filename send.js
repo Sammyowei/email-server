@@ -37,7 +37,7 @@ const sendThroughNodeMailer = async (email, subject, content, token) => {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grid Watermark</title>
+    <title>${subject}</title>
 </head>
 <body style="margin: 0; padding: 20px; min-height: 100vh; position: relative; font-family: Arial, sans-serif; box-sizing: border-box;">
 
@@ -102,7 +102,7 @@ const sendThroughNodeMailer = async (email, subject, content, token) => {
 
         <img style="height: 25px;" src="https://chyjlcmkbpkuniircbch.supabase.co/storage/v1/object/public/IRS/irs-logo%20(2).png?t=2024-12-10T22%3A52%3A06.511Z"  alt="" />
         <hr style="margin: 20px 0; border: none; border-top: 1px solid #555;">
-<div style="margin: 0;"> content here</div>
+<div style="margin: 0;"> ${content}</div>
         <hr style="margin: 20px 0; border: none; border-top: 1px solid #555;">
         <div style="text-align: start; font-size: 14px; color: #555; margin-top: 20px;">
             <p style="margin: 0;">Regards,</p>
